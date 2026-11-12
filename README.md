@@ -101,6 +101,7 @@ Showcase (`npm run dev`) запускается и останавливаетс�
 - `src/tokens/primitives.css` — примитивы (литералы только здесь)
 - `src/tokens/semantics.css` — смысловые и компонентные токены, только `var(--primitive)`
 - `src/tokens/typography.css` — 17 Text styles как классы `.ds-*` без цвета
+- `src/tokens/fonts.css` — @font-face для Avenir Next Cyr (файлы в `src/assets/fonts/`)
 - `src/tokens/motion.css` — длительности и easing переходов (добавлено для Storybook, в ДС нет)
 - `src/components/<Name>/` — компонент, CSS Module, index, `<Name>.stories.tsx`; общий реэкспорт в `src/components/index.ts`
 - `src/components/Icon/icons.ts` — 25 SVG-иконок из Figma; `src/assets/icons/activity.png` — растровая иконка «Активность»
@@ -114,4 +115,4 @@ Showcase (`npm run dev`) запускается и останавливаетс�
 - Имя = якорь: `bg/mainWhite` → `--bg-mainWhite`, `Header / Navbar` → `<HeaderNavbar>`.
 - В стилях только токены, без прибитых значений. Новые токены и компоненты — только после появления в дизайн-системе.
 - Иконки — SVG из Figma: `<Icon name="24px / calendar" />`, цвет наследуется (`currentColor`) — задавайте токенами `icons/*`.
-- Шрифт Avenir Next Cyr не вложен (лицензия): нужен файл шрифта, иначе работает фолбэк.
+- Шрифт Avenir Next Cyr вложен: `src/assets/fonts/` (Regular 400, Medium 500, Demi 600), подключение — `src/tokens/fonts.css`. Шрифт коммерческий, используется по веб-лицензии.

@@ -1,5 +1,6 @@
 import type { Preview } from '@storybook/react-vite';
 // Токены и базовые стили — те же, что в приложении (src/main.tsx)
+import '../src/tokens/fonts.css';
 import '../src/tokens/primitives.css';
 import '../src/tokens/semantics.css';
 import '../src/tokens/typography.css';

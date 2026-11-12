@@ -94,7 +94,7 @@
   --warning-1000: #372104;
 
   /* ===== Typography / font/* ===== */
-  /* Avenir Next Cyr — коммерческий шрифт, в проект не вложен: ниже фолбэки. */
+  /* Avenir Next Cyr подключён через @font-face в fonts.css; ниже — фолбэки на время загрузки. */
   --font-family-headings: "Avenir Next Cyr", "Avenir Next", "Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-family-subtitles: var(--font-family-headings);
   --font-family-body: var(--font-family-headings);
