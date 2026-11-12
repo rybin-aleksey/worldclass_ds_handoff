@@ -1,0 +1,41 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  width: 100%;
+}
+.field {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  height: 44px;                 /* высота поля FIXED 44 в Figma */
+  padding: var(--spacing-3) var(--spacing-4);
+  border-radius: var(--border-radius-2);
+  background: var(--bg-baseGray);
+}
+/* Pressed: обводка 1px typography/primary (как в Figma). Нативно — при фокусе. */
+.field:focus-within,
+.pressed {
+  box-shadow: inset 0 0 0 1px var(--typography-primary);
+}
+.icon { color: var(--icons-secondaryLine); }
+.input {
+  flex: 1;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: var(--typography-primary);
+}
+.input::placeholder { color: var(--typography-secondary); }
+
+/* Disabled: фон в Figma — примитив gray/50 (= bg/baseGray), плейсхолдер — примитив gray/150 без смыслового токена */
+.disabled { background: var(--bg-baseGray); }
+.disabled .input { cursor: not-allowed; }
+.disabled .input::placeholder { color: var(--gray-150); }
+
+/* Живые переходы между состояниями (директива storybook, фаза 4) */
+.field {
+  transition: background-color var(--motion-duration-fast) var(--motion-easing-standard), border-color var(--motion-duration-fast) var(--motion-easing-standard), color var(--motion-duration-fast) var(--motion-easing-standard), box-shadow var(--motion-duration-fast) var(--motion-easing-standard);
+}

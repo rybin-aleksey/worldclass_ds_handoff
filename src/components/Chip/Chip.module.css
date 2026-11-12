@@ -1,0 +1,76 @@
+.root {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: var(--border-radius-6);
+  color: var(--typography-primary);
+  white-space: nowrap;
+  font-family: var(--font-family-subtitles);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-sm);
+  line-height: var(--font-line-height-2xs);
+  letter-spacing: var(--font-letter-spacing-sm);
+}
+button.root { cursor: pointer; }
+button.root:disabled { cursor: not-allowed; }
+button.root:focus-visible { outline: 2px solid var(--typography-primary); outline-offset: 2px; }
+
+/* type=time — 52 px, текст heading/text 18/20 */
+.time {
+  padding: var(--spacing-4) var(--spacing-6);
+  background: var(--bg-baseGray);
+  font-size: var(--font-size-md);
+  line-height: var(--font-line-height-sm);
+  letter-spacing: var(--font-letter-spacing-md);
+}
+
+/* type=filter — 32 px, cart/chips */
+.filter {
+  padding: var(--spacing-2) var(--spacing-4);
+  background: var(--bg-mainWhite);
+  border-color: var(--border-default);
+}
+.filter.disabled {
+  background: var(--bg-baseGray);
+  border-color: transparent;
+  color: var(--typography-secondary);
+}
+
+/* type=tab — not selected без фона, отступы 8/12 */
+.tab {
+  padding: var(--spacing-2) var(--spacing-3);
+  background: none;
+}
+.tab.selected { padding: var(--spacing-2) var(--spacing-4); }
+
+/* selected — общий вид для time, filter, tab */
+.selected {
+  background: var(--chips-selected-bg);
+  border-color: transparent;
+  color: var(--chips-selected-text);
+}
+
+/* type=tag — 30 px */
+.tag {
+  padding: var(--spacing-15) var(--spacing-4) var(--spacing-2);
+  background: var(--bg-baseGray);
+}
+
+/* type=tag small — 26 px, caption/cart_text 14/14 */
+.tagSmall {
+  padding: var(--spacing-15) var(--spacing-3);
+  border-radius: var(--border-radius-4);
+  background: var(--bg-baseGray);
+  color: var(--typography-secondary);
+  font-family: var(--font-family-captions);
+  font-size: var(--font-size-xs);
+  line-height: var(--font-line-height-3xs);
+}
+
+
+/* Живые переходы между состояниями (директива storybook, фаза 4) */
+.root {
+  transition: background-color var(--motion-duration-fast) var(--motion-easing-standard), border-color var(--motion-duration-fast) var(--motion-easing-standard), color var(--motion-duration-fast) var(--motion-easing-standard), box-shadow var(--motion-duration-fast) var(--motion-easing-standard);
+}

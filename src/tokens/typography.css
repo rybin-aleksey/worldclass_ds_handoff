@@ -1,0 +1,125 @@
+/*
+ * Text styles ДС World Class (17 стилей Figma) → служебные классы.
+ * Цвет в классы НЕ зашит: цвет текста задаётся отдельно токенами typography/*.
+ * Имя класса: .ds-<путь стиля, "/" → "-">.
+ * У стилей-дубликатов в Figma (heading/small ×2, heading/text ×3, cart/text ×2,
+ * caption/cart_text ×2, caption/small ×2) есть варианты с суффиксом интерлиньяжа в px;
+ * класс без суффикса = первый стиль с этим именем (как берёт агент в Figma).
+ */
+
+/* heading/medium_bold — Demi 24/24 */
+.ds-heading-medium_bold {
+  font-family: var(--font-family-headings);
+  font-weight: var(--font-weight-demibold);
+  font-size: var(--font-size-2xl);
+  line-height: var(--font-line-height-md);
+  letter-spacing: var(--font-letter-spacing-sm);
+}
+
+/* heading/medium — Regular 24/24 */
+.ds-heading-medium {
+  font-family: var(--font-family-headings);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-2xl);
+  line-height: var(--font-line-height-md);
+  letter-spacing: var(--font-letter-spacing-sm);
+}
+
+/* heading/small — Regular 20/20 и 20/24 */
+.ds-heading-small,
+.ds-heading-small-20,
+.ds-heading-small-24 {
+  font-family: var(--font-family-headings);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-xl);
+  line-height: var(--font-line-height-sm);
+  letter-spacing: var(--font-letter-spacing-xl);
+}
+.ds-heading-small-24 { line-height: var(--font-line-height-md); }
+
+/* heading/text — Medium 18/18, Regular 18/20, Regular 18/24 */
+.ds-heading-text,
+.ds-heading-text-18,
+.ds-heading-text-20,
+.ds-heading-text-24 {
+  font-family: var(--font-family-subtitles);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-md);
+  line-height: var(--font-line-height-sm);
+  letter-spacing: var(--font-letter-spacing-md);
+}
+.ds-heading-text,
+.ds-heading-text-18 { font-weight: var(--font-weight-medium); line-height: var(--font-line-height-xs); }
+.ds-heading-text-24 { line-height: var(--font-line-height-md); }
+
+/* regular/text — Regular 18/24 */
+.ds-regular-text {
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-md);
+  line-height: var(--font-line-height-md);
+  letter-spacing: var(--font-letter-spacing-xl);
+}
+
+/* text-bold — Medium 18/20 */
+.ds-text-bold {
+  font-family: var(--font-family-subtitles);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-md);
+  line-height: var(--font-line-height-sm);
+  letter-spacing: var(--font-letter-spacing-md);
+}
+
+/* cart/title — Medium 16/16 */
+.ds-cart-title {
+  font-family: var(--font-family-subtitles);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-sm);
+  line-height: var(--font-line-height-2xs);
+  letter-spacing: var(--font-letter-spacing-sm);
+}
+
+/* cart/chips — Regular 16/16 */
+.ds-cart-chips {
+  font-family: var(--font-family-subtitles);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-sm);
+  line-height: var(--font-line-height-2xs);
+  letter-spacing: var(--font-letter-spacing-sm);
+}
+
+/* cart/text — Regular 16/20 и 16/24 */
+.ds-cart-text,
+.ds-cart-text-20,
+.ds-cart-text-24 {
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-sm);
+  line-height: var(--font-line-height-sm);
+  letter-spacing: var(--font-letter-spacing-sm);
+}
+.ds-cart-text-24 { line-height: var(--font-line-height-md); }
+
+/* caption/cart_text — Regular 14/14 и 14/18 */
+.ds-caption-cart_text,
+.ds-caption-cart_text-14,
+.ds-caption-cart_text-18 {
+  font-family: var(--font-family-captions);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-xs);
+  line-height: var(--font-line-height-3xs);
+  letter-spacing: var(--font-letter-spacing-sm);
+}
+.ds-caption-cart_text-18 { line-height: var(--font-line-height-xs); }
+
+/* caption/small — Regular 12/12 и 12/16 */
+.ds-caption-small,
+.ds-caption-small-12,
+.ds-caption-small-16 {
+  font-family: var(--font-family-captions);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-xxs);
+  line-height: var(--font-line-height-4xs);
+  letter-spacing: 0;
+}
+.ds-caption-small-16 { line-height: var(--font-line-height-2xs); }

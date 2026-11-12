@@ -1,0 +1,18 @@
+.root {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+}
+.icon { flex: none; }
+.text {
+  font-family: var(--font-family-captions);
+  font-size: var(--font-size-sm);
+  line-height: var(--font-line-height-2xs);
+}
+
+/* В Figma цвета Helper Text не привязаны к токенам ДС (сырой hex или удалённая переменная);
+   ниже — ближайшие смысловые токены. См. заметки прогона. */
+.default { color: var(--typography-primary); }   /* было background/black #0C0D0D (удалена) */
+.negative { color: var(--typography-danger); }   /* было #FB3843 */
+.success { color: var(--typography-success); }   /* было #00AE54 = typography/success */
+.disabled { color: var(--typography-secondary); } /* было #B0B2B6 */

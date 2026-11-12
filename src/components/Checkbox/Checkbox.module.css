@@ -1,0 +1,44 @@
+.root {
+  position: relative;
+  display: inline-flex;
+  flex: none;
+  width: 20px;
+  height: 20px;
+}
+.input {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.box {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--border-radius-1);
+  /* В Figma — удалённая переменная icons/dark grey (#C1C8D7) у обоих состояний → ближайший токен */
+  background: var(--icons-secondaryLine);
+  pointer-events: none;
+}
+/* Галочка: линия 2px цвета bg/mainWhite (как в Figma) */
+.box::after {
+  content: '';
+  position: absolute;
+  top: 56%;   /* подобрано визуально в DevTools */
+  left: 50%;
+  width: 8px;
+  height: 4px;
+  border-bottom: 2px solid var(--bg-mainWhite);
+  border-left: 2px solid var(--bg-mainWhite);
+  /* Центр элемента — в центре флажка; −2px компенсируют смещение видимой «V» вниз после поворота */
+  transform: translate(-50%, calc(-50% - 2px)) rotate(-45deg);
+  opacity: 0;
+}
+.input:checked + .box::after { opacity: 1; }
+.input:focus-visible + .box { outline: 2px solid var(--typography-primary); outline-offset: 2px; }
+.input:disabled { cursor: not-allowed; }
+
+/* Живые переходы между состояниями (директива storybook, фаза 4) */
+.box::after {
+  transition: opacity var(--motion-duration-fast) var(--motion-easing-standard);
+}

@@ -1,0 +1,111 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+  width: 100%;
+}
+.title, .label { color: var(--typography-primary); }
+.hint { color: var(--typography-secondary); }
+
+/* State=Empty */
+.uploadRow {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  width: 100%;
+  padding: var(--spacing-4);
+  border: 0;
+  border-radius: var(--border-radius-3);
+  background: var(--bg-baseGray);
+  text-align: left;
+  cursor: pointer;
+}
+.info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--spacing-15);
+  min-width: 0;
+}
+.chevron { color: var(--icons-primaryLine); }
+
+/* State=Filled */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  padding: var(--spacing-4);
+  border-radius: var(--border-radius-3);
+  background: var(--bg-baseGray);
+}
+.fileContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);          /* в Figma 7 px без токена → spacing/2 */
+}
+.fileHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: var(--border-radius-4);
+  /* В Figma — удалённая переменная icons/dark grey (#C1C8D7) → ближайший токен */
+  background: var(--icons-secondaryLine);
+  color: var(--typography-primary);
+}
+.files {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.fileItem {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+  width: 104px;
+  height: 65px;
+  padding: var(--spacing-3);
+  border: 1px solid var(--border-default);   /* в Figma — удалённая icons/grey */
+  border-radius: var(--border-radius-2);
+  background: var(--bg-mainWhite);
+}
+.remove {
+  position: absolute;
+  top: var(--spacing-1);
+  right: var(--spacing-1);
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--border-radius-100);
+  background: var(--bg-baseGray);
+  cursor: pointer;
+}
+.remove::before,
+.remove::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 7px;
+  height: 0.76px;
+  background: var(--typography-secondary);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.remove::after { transform: translate(-50%, -50%) rotate(-45deg); }
+
+/* Живые переходы между состояниями (директива storybook, фаза 4) */
+.uploadRow,
+.remove {
+  transition: background-color var(--motion-duration-fast) var(--motion-easing-standard), border-color var(--motion-duration-fast) var(--motion-easing-standard), color var(--motion-duration-fast) var(--motion-easing-standard), box-shadow var(--motion-duration-fast) var(--motion-easing-standard);
+}

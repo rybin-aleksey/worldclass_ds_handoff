@@ -1,0 +1,182 @@
+/*
+ * Primitive tokens — слой 1 ДС World Class.
+ * Источник: ds/foundation.md + Figma Variables (World Class – Redesign, NXZc8qyHamVPiilIhuS3gM), сверка 2026-11-11.
+ * Правило имён: путь Figma, "/" → "-", префикс "primitives/" опускается,
+ * пробелы → "-" ("border radius/3" → --border-radius-3).
+ * Литералы допустимы только в этом файле.
+ */
+:root {
+  /* ===== Colors / primitives ===== */
+
+  /* primitives/gray/* */
+  --gray-0: #FFFFFF;
+  --gray-50: #F8F8FA;
+  --gray-100: #DEDFE2;
+  --gray-150: #C5C7CB;
+  --gray-200: #ADAFB5;
+  --gray-300: #9598A0;
+  --gray-400: #7E828A;
+  --gray-500: #686C75;
+  --gray-600: #53575F;
+  --gray-700: #3F4249;
+  --gray-800: #2D2F34;
+  --gray-850: #1C1D20;
+  --gray-900: #0B0C0E;
+  --gray-950: #020202;
+  --gray-1000: #000000;
+
+  /* primitives/brand/* */
+  --brand-0: #FFFFFF;
+  --brand-50: #FDE9EA;
+  --brand-100: #FAC8CA;
+  --brand-150: #F7ADB1;
+  --brand-200: #F49096;
+  --brand-300: #F16F76;
+  --brand-400: #ED4D56;
+  --brand-500: #E9212C;
+  --brand-600: #C61C25;
+  --brand-700: #A3171F;
+  --brand-800: #8C141A;
+  --brand-850: #801218;
+  --brand-900: #751116;
+  --brand-950: #520C0F;
+  --brand-1000: #33070A;
+
+  /* primitives/error/* */
+  --error-0: #FFFFFF;
+  --error-50: #FBEAE8;
+  --error-100: #F6CBC5;
+  --error-150: #F2B1A8;
+  --error-200: #EC958A;
+  --error-300: #E67467;
+  --error-400: #E15444;
+  --error-500: #D92915;
+  --error-600: #B82312;
+  --error-700: #981D0F;
+  --error-800: #82190D;
+  --error-850: #77170C;
+  --error-900: #6C150B;
+  --error-950: #4C0E07;
+  --error-1000: #300B05;
+
+  /* primitives/success/* */
+  --success-0: #FFFFFF;
+  --success-50: #E4F3EA;
+  --success-100: #BDE1CA;
+  --success-150: #9AD3AF;
+  --success-200: #74C493;
+  --success-300: #42B470;
+  --success-400: #0CA453;
+  --success-500: #049137;
+  --success-600: #047B2E;
+  --success-700: #006525;
+  --success-800: #005620;
+  --success-850: #014F1D;
+  --success-900: #004819;
+  --success-950: #003212;
+  --success-1000: #002009;
+
+  /* primitives/warning/* */
+  --warning-0: #FFFFFF;
+  --warning-50: #FEF4E6;
+  --warning-100: #FCE3BF;
+  --warning-150: #FBD6A0;
+  --warning-200: #F9C880;
+  --warning-300: #F7B859;
+  --warning-400: #F5A733;
+  --warning-500: #F29100;
+  --warning-600: #CE7B00;
+  --warning-700: #A96500;
+  --warning-800: #915700;
+  --warning-850: #854F00;
+  --warning-900: #794800;
+  --warning-950: #553300;
+  --warning-1000: #372104;
+
+  /* ===== Typography / font/* ===== */
+  /* Avenir Next Cyr — коммерческий шрифт, в проект не вложен: ниже фолбэки. */
+  --font-family-headings: "Avenir Next Cyr", "Avenir Next", "Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-family-subtitles: var(--font-family-headings);
+  --font-family-body: var(--font-family-headings);
+  --font-family-captions: var(--font-family-headings);
+  --font-family-buttons: var(--font-family-headings);
+
+  --font-weight-regular: 400;   /* Regular */
+  --font-weight-medium: 500;    /* Medium */
+  --font-weight-demibold: 600;  /* Demi */
+
+  --font-size-xxs: 12px;
+  --font-size-xs: 14px;
+  --font-size-sm: 16px;
+  --font-size-md: 18px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 24px;
+  --font-size-3xl: 36px;
+  --font-size-4xl: 48px;
+  --font-size-5xl: 60px;
+  --font-size-6xl: 96px;
+
+  --font-line-height-4xs: 12px;
+  --font-line-height-3xs: 14px;
+  --font-line-height-2xs: 16px;
+  --font-line-height-xs: 18px;
+  --font-line-height-sm: 20px;
+  --font-line-height-md: 24px;
+  --font-line-height-xl: 28px;
+  --font-line-height-2xl: 32px;
+  --font-line-height-3xl: 40px;
+  --font-line-height-4xl: 48px;
+  --font-line-height-5xl: 60px;
+  --font-line-height-6xl: 116px;
+
+  --font-letter-spacing-xs: -0.15px;
+  --font-letter-spacing-sm: -0.31px;
+  --font-letter-spacing-md: -0.44px;
+  --font-letter-spacing-xl: -0.45px;
+
+  /* ===== Dimensions / border radius/* ===== */
+  --border-radius-0: 0px;
+  --border-radius-05: 2px;
+  --border-radius-1: 4px;
+  --border-radius-2: 8px;
+  --border-radius-3: 12px;
+  --border-radius-4: 16px;
+  --border-radius-6: 24px;
+  --border-radius-100: 400px;
+
+  /* ===== Dimensions / spacing/* ===== */
+  --spacing-0: 0px;
+  --spacing-05: 2px;
+  --spacing-1: 4px;
+  --spacing-15: 6px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-5: 20px;
+  --spacing-6: 24px;
+  --spacing-8: 32px;
+  --spacing-9: 36px;
+  --spacing-10: 40px;
+  --spacing-12: 48px;
+  --spacing-16: 64px;
+  --spacing-20: 80px;
+
+  /* ===== Сырые значения смысловых токенов =====
+   * В Figma эти смысловые токены заданы hex, а не ссылкой на примитив
+   * (foundation.md, «Замечания»). Чтобы semantics.css ссылался только на var(),
+   * значения вынесены сюда под префиксом raw-. Это не новые токены ДС:
+   * имя = имя смыслового токена. Убрать, когда в Figma появятся привязки. */
+  --raw-bg-pictureBg: #D4D8E2;
+  --raw-bg-whiteOverlay10: rgb(255 255 255 / 0.1);
+  --raw-typography-success: #00AE54;
+  --raw-typography-danger: #E9222A;
+  --raw-clubs-red: #E9212C;
+  --raw-clubs-green: #14934B;
+  --raw-clubs-black: #401F15;
+  --raw-goals-wellness: #BBCFA7;
+  --raw-goals-weight-loss: #DFA1FF;
+  --raw-goals-sport-recovery: #FF0000;
+  --raw-goals-improve-health: #536EFF;
+  --raw-goals-muscle-gain: #9C0000;
+  --raw-rating-star: #FFB800;
+}

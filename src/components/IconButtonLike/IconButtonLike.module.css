@@ -1,0 +1,25 @@
+.root {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--border-radius-100);
+  /* В Figma фон привязан к примитиву primitives/gray/200: смыслового токена нет */
+  background: var(--gray-200);
+  color: var(--icons-onDark);
+  cursor: pointer;
+}
+/* Обводка сердца — icons/onDark. Заполненное сердце в Figma — #E9212C без токена; ближайший смысловой — typography/danger */
+.liked svg path { fill: var(--typography-danger); stroke: none; } /* isLiked=Yes — без белой обводки */
+/* Оптическая компенсация: сердце визуально «тяжелее» сверху */
+.root svg { transform: translateY(1px); }
+.root:focus-visible { outline: 2px solid var(--typography-primary); outline-offset: 2px; }
+
+/* Живые переходы между состояниями (директива storybook, фаза 4) */
+.root {
+  transition: background-color var(--motion-duration-fast) var(--motion-easing-standard), border-color var(--motion-duration-fast) var(--motion-easing-standard), color var(--motion-duration-fast) var(--motion-easing-standard), box-shadow var(--motion-duration-fast) var(--motion-easing-standard);
+}

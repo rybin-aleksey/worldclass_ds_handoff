@@ -1,0 +1,38 @@
+/* Фон и узор карты — арт из Figma (src/assets/membership/*.svg): токенов для артов в ДС нет */
+.root {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+}
+.compact {
+  width: 282px;
+  height: 168px;
+  padding: var(--spacing-5) var(--spacing-5) var(--spacing-4);
+  border-radius: var(--border-radius-3);
+}
+.full {
+  width: 343px;
+  height: 193px;
+  padding: var(--spacing-5);
+  border-radius: var(--border-radius-4);
+}
+.header,
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-15);
+}
+.full .header { gap: var(--spacing-2); }
+.titleRow {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+/* Прозрачность 70% задана в Figma на слоях */
+.muted { color: var(--typography-onDark); opacity: 0.7; }
+.title { color: var(--typography-white); }
+.strong { color: var(--typography-onDark); }   /* в Figma — сырой #FFFFFF */

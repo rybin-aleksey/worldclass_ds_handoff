@@ -1,0 +1,73 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+  width: 100%;
+  padding: var(--spacing-4) var(--spacing-5);
+  border: 1px solid var(--border-default);  /* в Figma — удалённая icons/grey (#E9EDF4) */
+  border-radius: var(--border-radius-3);
+  background: var(--bg-mainWhite);          /* в Figma — сырой #FFFFFF */
+}
+.open {
+  gap: var(--spacing-3);
+  padding-bottom: var(--spacing-5);
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-2);
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+}
+.title { color: var(--typography-primary); }
+.iconBox {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--border-radius-2);    /* в Figma r6 без токена → border radius/2 */
+  background: var(--bg-baseGray);
+}
+.chevron { color: var(--icons-primaryLine); }
+.iconBox .chevron { transform: rotate(90deg); }        /* закрыт — шеврон вниз */
+.open .iconBox .chevron { transform: rotate(-90deg); } /* открыт — шеврон вверх */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);                    /* в Figma 28 px без токена → spacing/6 */
+}
+.description {
+  margin: 0;
+  color: var(--typography-secondary);
+}
+.upload {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  width: 100%;
+  padding: var(--spacing-4);
+  border: 0;
+  border-radius: var(--border-radius-3);
+  background: var(--bg-baseGray);
+  text-align: left;
+  cursor: pointer;
+}
+.uploadInfo {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--spacing-15);
+}
+.hint { color: var(--typography-secondary); }
+
+/* Живые переходы между состояниями (директива storybook, фаза 4) */
+.chevron {
+  transition: transform var(--motion-duration-base) var(--motion-easing-standard);
+}

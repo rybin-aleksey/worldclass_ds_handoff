@@ -1,0 +1,41 @@
+.root {
+  position: relative;
+  display: inline-flex;
+  flex: none;
+  width: 16px;
+  height: 16px;
+}
+.input {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--border-default);  /* как в инстансе Radio Row; мастер — удалённая icons/grey */
+  border-radius: var(--border-radius-100);
+  background: var(--bg-mainWhite);
+  pointer-events: none;
+}
+.circle::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: var(--border-radius-100);
+  /* В Figma — удалённая background/black; её заменил chips/selected/bg (foundation.md) */
+  background: var(--chips-selected-bg);
+  opacity: 0;
+}
+.input:checked + .circle::after { opacity: 1; }
+.input:focus-visible + .circle { outline: 2px solid var(--typography-primary); outline-offset: 2px; }
+
+/* Живые переходы между состояниями (директива storybook, фаза 4) */
+.circle::after {
+  transition: opacity var(--motion-duration-fast) var(--motion-easing-standard);
+}

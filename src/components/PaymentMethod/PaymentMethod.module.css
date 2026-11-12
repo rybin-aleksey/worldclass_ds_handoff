@@ -1,0 +1,44 @@
+.root {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  width: 100%;
+  min-height: 48px;
+  padding: var(--spacing-3) var(--spacing-4);
+  border: 0;
+  border-radius: var(--border-radius-2);
+  background: var(--bg-baseGray);
+  text-align: left;
+  cursor: pointer;
+}
+/* В Figma текст 18/135% без стиля → ближайший стиль heading/text 18/24 */
+.text {
+  flex: 1;
+  color: var(--typography-primary);
+}
+.check {
+  position: relative;
+  flex: none;
+  width: 22px;
+  height: 22px;
+  border-radius: var(--border-radius-100);
+  /* В Figma — удалённая background/black → chips/selected/bg */
+  background: var(--chips-selected-bg);
+}
+.check::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 7px;
+  width: 8px;
+  height: 4px;
+  border-bottom: 1px solid var(--icons-onDark);  /* в Figma — удалённая buttons/grey_pressed */
+  border-left: 1px solid var(--icons-onDark);
+  transform: rotate(-45deg);
+}
+.root:focus-visible { outline: 2px solid var(--typography-primary); outline-offset: 2px; }
+
+/* Живые переходы между состояниями (директива storybook, фаза 4) */
+.root {
+  transition: background-color var(--motion-duration-fast) var(--motion-easing-standard), border-color var(--motion-duration-fast) var(--motion-easing-standard), color var(--motion-duration-fast) var(--motion-easing-standard), box-shadow var(--motion-duration-fast) var(--motion-easing-standard);
+}

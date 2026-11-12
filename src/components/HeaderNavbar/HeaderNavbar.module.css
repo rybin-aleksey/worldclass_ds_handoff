@@ -1,0 +1,42 @@
+.root {
+  width: 100%;
+  padding-top: var(--spacing-12);          /* зона статус-бара iOS */
+  border-bottom: 1px solid var(--border-light);
+  background: var(--bg-mainWhite);
+}
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 0 var(--spacing-4);
+}
+/* В Figma Title 18/22 без стиля → ближайший стиль heading/text 18/20 */
+.title {
+  margin: 0;
+  overflow: hidden;
+  color: var(--typography-primary);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.back,
+.action {
+  position: absolute;
+  top: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--icons-primaryLine);
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.back { left: var(--spacing-1); }
+.action {
+  right: var(--spacing-1);
+  width: 36px;
+  height: 36px;
+}

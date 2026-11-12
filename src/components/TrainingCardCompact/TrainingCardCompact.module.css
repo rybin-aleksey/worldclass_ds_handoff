@@ -1,0 +1,46 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+  width: 164px;
+}
+.media {
+  position: relative;
+  display: flex;
+  align-items: flex-end;                    /* бейдж мест прибит к низу фото, как в Figma */
+  width: 164px;
+  height: 132px;
+  padding: var(--spacing-2);
+  border-radius: var(--border-radius-4);
+}
+.image { position: absolute; inset: 0; }
+.badge {
+  position: relative;
+  padding: var(--spacing-05) var(--spacing-2);
+  border-radius: var(--border-radius-4);
+  background: var(--bg-mainWhite);
+  color: var(--typography-primary);
+}
+.like {
+  position: absolute;
+  top: var(--spacing-2);
+  right: var(--spacing-2);
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+}
+/* В Figma Time и Instructor 14/100%, Title 16/110% без стилей → ближайшие стили caption/cart_text 14/14 и cart/chips 16/16 */
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-05);
+}
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.primary { color: var(--typography-primary); }
+.secondary { color: var(--typography-secondary); }

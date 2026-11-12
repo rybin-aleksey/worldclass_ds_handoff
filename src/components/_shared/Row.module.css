@@ -1,0 +1,36 @@
+/* Общая раскладка строк 343×56: Trainer Row, Training Row, Club Row */
+.root {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  width: 100%;
+  min-height: 56px;
+  padding: 0;
+  border: 0;
+  background: var(--bg-mainWhite);
+  text-align: left;
+  cursor: pointer;
+}
+.info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--spacing-1);
+  min-width: 0;
+}
+/* Тексты в одну строку с обрезкой */
+.title,
+.subtitle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.title { color: var(--typography-primary); }
+.subtitle { color: var(--typography-secondary); }
+.chevron { color: var(--icons-primaryLine); }
+.root:focus-visible { outline: 2px solid var(--typography-primary); outline-offset: 2px; }
+
+/* Живые переходы между состояниями (директива storybook, фаза 4) */
+.root {
+  transition: background-color var(--motion-duration-fast) var(--motion-easing-standard), border-color var(--motion-duration-fast) var(--motion-easing-standard), color var(--motion-duration-fast) var(--motion-easing-standard), box-shadow var(--motion-duration-fast) var(--motion-easing-standard);
+}

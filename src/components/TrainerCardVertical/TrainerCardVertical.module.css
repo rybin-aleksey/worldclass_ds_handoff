@@ -1,0 +1,61 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  width: 168px;
+  background: var(--bg-mainWhite);
+}
+.media {
+  position: relative;
+  display: flex;
+  align-items: flex-end;                    /* бейдж стажа прибит к низу фото, как в Figma */
+  width: 168px;
+  height: 168px;
+  padding: var(--spacing-2);
+}
+.photo { position: absolute; inset: 0; }
+.badge {
+  position: relative;
+  padding: var(--spacing-1) var(--spacing-2);
+  border-radius: var(--border-radius-4);
+  background: var(--bg-mainWhite);
+  color: var(--typography-primary);
+}
+.like {
+  position: absolute;
+  top: var(--spacing-2);
+  right: var(--spacing-2);
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+}
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-05);
+}
+.rating {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+}
+.star {
+  width: 16px;
+  height: 16px;
+  background: var(--rating-star);
+  clip-path: polygon(50% 6%, 61% 38%, 95% 38%, 67% 58%, 78% 92%, 50% 71%, 22% 92%, 33% 58%, 5% 38%, 39% 38%);
+}
+.dot {
+  width: 4px;
+  height: 4px;
+  border-radius: var(--border-radius-100);
+  background: var(--typography-secondary);
+}
+.priceRow {
+  display: flex;
+  align-items: baseline;
+}
+.primary { color: var(--typography-primary); }
+.secondary { color: var(--typography-secondary); }

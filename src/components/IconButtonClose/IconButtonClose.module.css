@@ -1,0 +1,41 @@
+.root {
+  position: relative;
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--border-radius-100);
+  cursor: pointer;
+}
+
+/* Крестик: две линии 8×8 по диагонали, толщина как в Figma (1.33) */
+.cross { position: relative; width: 8px; height: 8px; }
+.cross::before,
+.cross::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 11.3px;
+  height: 1.33px;
+  border-radius: var(--border-radius-05);
+  background: currentColor;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.cross::after { transform: translate(-50%, -50%) rotate(-45deg); }
+
+.light { background: var(--bg-baseGray); color: var(--icons-secondaryLine); }
+/* Overlay: прозрачность 60% задана в Figma на слое, не в токене */
+.overlay { background: color-mix(in srgb, var(--buttons-close-bg) 60%, transparent); color: var(--icons-primaryLine); }
+.dark { background: var(--buttons-close-bgDark); color: var(--icons-onDark); }
+
+.root:focus-visible { outline: 2px solid var(--typography-primary); outline-offset: 2px; }
+
+/* Живые переходы между состояниями (директива storybook, фаза 4) */
+.root {
+  transition: background-color var(--motion-duration-fast) var(--motion-easing-standard), border-color var(--motion-duration-fast) var(--motion-easing-standard), color var(--motion-duration-fast) var(--motion-easing-standard), box-shadow var(--motion-duration-fast) var(--motion-easing-standard);
+}

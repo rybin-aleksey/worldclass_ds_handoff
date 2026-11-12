@@ -1,0 +1,31 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-2);
+  width: 100%;
+}
+/* В Figma Title 24/100% и Description 18/135% без стилей → ближайшие heading/medium 24/24 и regular/text 18/24 */
+.title {
+  margin: 0;
+  color: var(--typography-primary);
+}
+.description {
+  margin: 0;
+  color: var(--typography-secondary);
+}
+.truncate {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+}
+.toggle {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--typography-primary);
+  cursor: pointer;
+}
+.toggle:focus-visible { outline: 2px solid var(--typography-primary); outline-offset: 2px; }

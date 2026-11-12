@@ -1,0 +1,82 @@
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-1);
+  width: 100%;
+  padding: var(--spacing-4);
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius-3);
+  background: var(--bg-mainWhite);
+}
+.content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  min-width: 0;
+  padding-right: var(--spacing-3);
+}
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+/* Логотип сети — плейсхолдер 24×24 цвета clubs/* */
+.logo {
+  flex: none;
+  width: 24px;
+  height: 24px;
+  border-radius: var(--border-radius-100);
+}
+.red { background: var(--clubs-red); }
+.green { background: var(--clubs-green); }
+.black { background: var(--clubs-black); }
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+}
+.metroRow {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+}
+.metroLine {
+  flex: none;
+  width: 11px;
+  height: 4px;
+  border-radius: var(--border-radius-05);
+  background: var(--typography-secondary);
+}
+/* В Figma Address 14/125% без стиля → ближайший стиль caption/cart_text 14/18 */
+.address {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.primary { color: var(--typography-primary); }
+.secondary { color: var(--typography-secondary); }
+.actions {
+  display: flex;
+  gap: var(--spacing-15);
+}
+.action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 68px;
+  padding: 0 var(--spacing-3);
+  border: 0;
+  border-radius: var(--border-radius-2);
+  background: var(--bg-baseGray);
+  color: var(--icons-primaryLine);
+  cursor: pointer;
+}
+.action:focus-visible { outline: 2px solid var(--typography-primary); outline-offset: 2px; }
+
+/* Живые переходы между состояниями (директива storybook, фаза 4) */
+.action {
+  transition: background-color var(--motion-duration-fast) var(--motion-easing-standard), border-color var(--motion-duration-fast) var(--motion-easing-standard), color var(--motion-duration-fast) var(--motion-easing-standard), box-shadow var(--motion-duration-fast) var(--motion-easing-standard);
+}

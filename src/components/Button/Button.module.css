@@ -1,0 +1,68 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;              /* в Figma 343 по умолчанию, в Auto Layout — Fill */
+  border: 1px solid transparent;
+  font-family: var(--font-family-buttons);
+  font-weight: var(--font-weight-regular);
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Size */
+.large {
+  padding: var(--spacing-5) var(--spacing-6);
+  font-size: var(--font-size-md);
+  line-height: var(--font-line-height-xs);
+  border-radius: var(--border-radius-100);
+}
+.small {
+  padding: var(--spacing-4) var(--spacing-6);
+  font-size: var(--font-size-sm);
+  line-height: var(--font-line-height-2xs);
+  border-radius: var(--border-radius-100);
+}
+
+/* Type=Primary */
+.primary {
+  background: var(--buttons-primary-default-bg);
+  color: var(--buttons-primary-default-text);
+}
+.primary:active:not(:disabled),
+.primary.pressed {
+  background: var(--buttons-primary-active-bg);
+}
+.primary:disabled {
+  background: var(--buttons-primary-disable-bg);
+  color: var(--buttons-primary-disable-text);
+  cursor: not-allowed;
+}
+
+/* Type=Secondary */
+.secondary {
+  background: var(--buttons-secondary-default-bg);
+  border-color: var(--buttons-secondary-default-border);
+  color: var(--buttons-secondary-default-text);
+}
+.secondary.small { border-radius: var(--border-radius-3); }
+.secondary:active:not(:disabled),
+.secondary.pressed {
+  background: var(--buttons-secondary-active-bg);
+  border-color: var(--buttons-secondary-active-border);
+}
+.secondary:disabled {
+  border-color: var(--buttons-secondary-disable-border);
+  color: var(--buttons-secondary-disable-text);
+  cursor: not-allowed;
+}
+
+.root:focus-visible {
+  outline: 2px solid var(--typography-primary);
+  outline-offset: 2px;
+}
+
+/* Живые переходы между состояниями (директива storybook, фаза 4) */
+.root {
+  transition: background-color var(--motion-duration-fast) var(--motion-easing-standard), border-color var(--motion-duration-fast) var(--motion-easing-standard), color var(--motion-duration-fast) var(--motion-easing-standard), box-shadow var(--motion-duration-fast) var(--motion-easing-standard);
+}

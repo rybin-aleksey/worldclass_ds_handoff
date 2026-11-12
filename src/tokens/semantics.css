@@ -1,0 +1,71 @@
+/*
+ * Semantic + component tokens — слои 2 и 3 ДС World Class.
+ * Каждый токен ссылается на примитив через var(). Литералов здесь нет.
+ * Значения сверены с Figma Variables 2026-11-11. Где Figma расходится с foundation.md,
+ * взято значение из Figma (помечено «Figma ≠ md»).
+ * Правило имён: путь Figma, "/" → "-", пробелы → "-", "&" опускается.
+ */
+:root {
+  /* ===== bg/* ===== */
+  --bg-mainWhite: var(--gray-0);
+  --bg-baseGray: var(--gray-50);
+  --bg-pictureBg: var(--raw-bg-pictureBg);        /* сырое в Figma */
+  --bg-grabber: var(--gray-150);
+  --bg-whiteOverlay10: var(--raw-bg-whiteOverlay10); /* сырое в Figma */
+
+  /* ===== typography/* (цвет текста) ===== */
+  --typography-primary: var(--gray-800);
+  --typography-secondary: var(--gray-300);
+  --typography-white: var(--gray-50);             /* не чисто белый */
+  --typography-onDark: var(--gray-0);
+  --typography-success: var(--raw-typography-success); /* сырое в Figma */
+  --typography-danger: var(--raw-typography-danger);   /* сырое в Figma */
+
+  /* ===== border/* ===== */
+  --border-default: var(--gray-100);
+  --border-light: var(--gray-50);
+
+  /* ===== icons/* ===== */
+  --icons-primaryLine: var(--gray-800);
+  --icons-secondaryLine: var(--gray-300);
+  --icons-onDark: var(--gray-0);
+
+  /* ===== tech/* ===== */
+  --tech-error: var(--error-500);
+  --tech-success: var(--success-400);
+
+  /* ===== clubs/* (бренды сетей) ===== */
+  --clubs-red: var(--raw-clubs-red);
+  --clubs-green: var(--raw-clubs-green);
+  --clubs-black: var(--raw-clubs-black);
+
+  /* ===== goals/* ===== */
+  --goals-wellness: var(--raw-goals-wellness);
+  --goals-weight-loss: var(--raw-goals-weight-loss);
+  --goals-sport-recovery: var(--raw-goals-sport-recovery);
+  --goals-improve-health: var(--raw-goals-improve-health);
+  --goals-muscle-gain: var(--raw-goals-muscle-gain);
+
+  /* ===== rating/* ===== */
+  --rating-star: var(--raw-rating-star);
+
+  /* ===== Слой 3: buttons/* ===== */
+  --buttons-primary-default-bg: var(--gray-800);   /* Figma ≠ md (в md gray/900) */
+  --buttons-primary-default-text: var(--gray-50);
+  --buttons-primary-active-bg: var(--gray-700);    /* Figma ≠ md (в md gray/800) */
+  --buttons-primary-disable-bg: var(--gray-50);
+  --buttons-primary-disable-text: var(--gray-300);
+  --buttons-secondary-default-bg: var(--gray-0);
+  --buttons-secondary-default-text: var(--gray-800);
+  --buttons-secondary-default-border: var(--gray-100);
+  --buttons-secondary-active-bg: var(--gray-50);
+  --buttons-secondary-active-border: var(--gray-100);
+  --buttons-secondary-disable-border: var(--gray-50);
+  --buttons-secondary-disable-text: var(--gray-300);
+  --buttons-close-bg: var(--gray-100);
+  --buttons-close-bgDark: var(--gray-500);
+
+  /* ===== Слой 3: chips/* ===== */
+  --chips-selected-bg: var(--gray-800);            /* Figma ≠ md (в md gray/900) */
+  --chips-selected-text: var(--gray-0);
+}

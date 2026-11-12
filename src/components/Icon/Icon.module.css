@@ -1,0 +1,11 @@
+/* Иконка. Цвет — currentColor: задаёт родитель токеном icons/*. */
+.root {
+  display: inline-block;
+  flex: none;
+  vertical-align: middle;
+}
+/* Растровая иконка activity: круглое изображение */
+.raster {
+  border-radius: var(--border-radius-100);
+  object-fit: cover;
+}

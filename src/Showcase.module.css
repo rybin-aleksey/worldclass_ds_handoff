@@ -1,0 +1,143 @@
+/* Тестовая страница. Только токены. */
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-12);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-10) var(--spacing-6) var(--spacing-20);
+}
+.pageHeader {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+.pageHeader h1, .pageHeader p { margin: 0; }
+.toc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-3);
+}
+.toc a { color: var(--typography-primary); }
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+  scroll-margin-top: var(--spacing-6);
+}
+.sectionTitle {
+  margin: 0;
+  padding-bottom: var(--spacing-2);
+  border-bottom: 1px solid var(--border-default);
+}
+.caption { color: var(--typography-secondary); }
+.code {
+  color: var(--typography-secondary);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+/* Палитра */
+.swatchGroup { display: flex; flex-direction: column; gap: var(--spacing-3); }
+.groupTitle { margin: 0; }
+.swatches {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--spacing-4);
+}
+.swatch { display: flex; flex-direction: column; gap: var(--spacing-1); }
+.chipColor {
+  height: 56px;
+  border: 1px solid var(--border-default);
+  border-radius: var(--border-radius-3);
+}
+.scaleRow { display: flex; align-items: center; gap: var(--spacing-4); }
+.scaleName { width: 72px; flex: none; }
+.scale { display: flex; flex: 1; gap: var(--spacing-1); overflow-x: auto; }
+.scaleStep { display: flex; flex-direction: column; align-items: center; gap: var(--spacing-1); }
+.scaleColor {
+  width: 56px;
+  height: 40px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius-2);
+}
+
+/* Типографика */
+.typeList { display: flex; flex-direction: column; gap: var(--spacing-4); }
+.typeRow {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  align-items: baseline;
+  gap: var(--spacing-6);
+}
+
+/* Галерея */
+.specimen {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  padding: var(--spacing-6);
+  border: 1px solid var(--border-default);
+  border-radius: var(--border-radius-4);
+}
+.specimenHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--spacing-2);
+}
+.specimenBody { display: flex; flex-direction: column; gap: var(--spacing-6); }
+.labeled { display: flex; flex-direction: column; gap: var(--spacing-2); }
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--spacing-6);
+}
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+  max-width: 375px;
+}
+.matrix {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--spacing-5);
+}
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--spacing-6);
+}
+.phoneRow {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+  gap: var(--spacing-6);
+}
+.phone {
+  width: 375px;
+  max-width: 100%;
+  border: 1px solid var(--border-default);
+  border-radius: var(--border-radius-3);
+  overflow: hidden;
+  background: var(--bg-mainWhite);
+}
+.phoneGray { padding-top: var(--spacing-4); background: var(--bg-baseGray); }
+.photoBg {
+  display: inline-flex;
+  padding: var(--spacing-3);
+  border-radius: var(--border-radius-3);
+  background: var(--bg-pictureBg);
+}
+.iconCell {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: var(--border-radius-3);
+  background: var(--bg-baseGray);
+  color: var(--icons-primaryLine);
+}

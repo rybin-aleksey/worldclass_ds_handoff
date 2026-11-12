@@ -1,0 +1,39 @@
+.root {
+  display: inline-flex;
+  flex: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 35px;
+  height: 72px;
+  padding: var(--spacing-2);
+  border: 0;
+  border-radius: var(--border-radius-3);
+  background: var(--bg-baseGray);
+  color: var(--typography-secondary);
+  cursor: pointer;
+}
+.dotted { gap: var(--spacing-15); }
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-15);
+}
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--border-radius-100);
+  background: var(--typography-primary);
+}
+/* В Figma текст активной ячейки окрашен bg/mainWhite → смысловой chips/selected/text (то же значение) */
+.active {
+  background: var(--chips-selected-bg);
+  color: var(--chips-selected-text);
+}
+.root:focus-visible { outline: 2px solid var(--typography-primary); outline-offset: 2px; }
+
+/* Живые переходы между состояниями (директива storybook, фаза 4) */
+.root {
+  transition: background-color var(--motion-duration-fast) var(--motion-easing-standard), border-color var(--motion-duration-fast) var(--motion-easing-standard), color var(--motion-duration-fast) var(--motion-easing-standard), box-shadow var(--motion-duration-fast) var(--motion-easing-standard);
+}
