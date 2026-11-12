@@ -1,0 +1,21 @@
+import{n as e}from"./rolldown-runtime-sJBDdmOt.js";import{t}from"./jsx-runtime-MKhVqBIO.js";import{t as n}from"./cx-BOo3OvTL.js";import{n as r}from"./Icon-CKeJH59w.js";import{t as i}from"./Icon-DQAy2_MQ.js";var a,o,s,c,l,u,d;function f(){return(f=e((()=>{a=`_root_1qnmy_1`,o=`_tabs_1qnmy_7`,s=`_item_1qnmy_13`,c=`_tab_1qnmy_7`,l=`_active_1qnmy_27`,u=`_label_1qnmy_29`,d={root:a,tabs:o,item:s,tab:c,active:l,label:u}})))()}function p({activeTab:e=1,onChange:t,className:i,...a}){return(0,m.jsx)(`nav`,{className:n(d.root,i),"aria-label":`Основная навигация`,...a,children:(0,m.jsx)(`ul`,{className:d.tabs,children:h.map((i,a)=>{let o=a+1,s=o===e;return(0,m.jsx)(`li`,{className:d.item,children:(0,m.jsxs)(`button`,{type:`button`,"aria-current":s?`page`:void 0,className:n(d.tab,s&&d.active),onClick:()=>t?.(o),children:[(0,m.jsx)(r,{name:i.icon,size:i.icon===`activity`?30:void 0}),(0,m.jsx)(`span`,{className:d.label,children:i.label})]})},i.label)})})})}var m,h;function g(){return(g=e((()=>{i(),f(),m=t(),h=[{label:`Главная`,icon:`26px / home`},{label:`Расписание`,icon:`26px / schedule`},{label:`Активность`,icon:`activity`},{label:`Каталог`,icon:`26px / catalog`},{label:`Профиль`,icon:`26px / profile`}],p.__docgenInfo={description:`Tab Bar — Figma 407:2310. Нижний таббар на 5 вкладок, 375×83 (с зоной Home Bar 34 px).`,methods:[],displayName:`TabBar`,props:{activeTab:{required:!1,tsType:{name:`union`,raw:`1 | 2 | 3 | 4 | 5`,elements:[{name:`literal`,value:`1`},{name:`literal`,value:`2`},{name:`literal`,value:`3`},{name:`literal`,value:`4`},{name:`literal`,value:`5`}]},description:`activeTab: 1 | 2 | 3 | 4 | 5`,defaultValue:{value:`1`,computed:!1}},onChange:{required:!1,tsType:{name:`signature`,type:`function`,raw:`(tab: TabBarTab) => void`,signature:{arguments:[{type:{name:`union`,raw:`1 | 2 | 3 | 4 | 5`,elements:[{name:`literal`,value:`1`},{name:`literal`,value:`2`},{name:`literal`,value:`3`},{name:`literal`,value:`4`},{name:`literal`,value:`5`}]},name:`tab`}],return:{name:`void`}}},description:``}},composes:[`Omit`]}})))()}var _,v,y,b,x,S,C,w,T;function E(){return(E=e((()=>{g(),_=t(),{useArgs:v}=__STORYBOOK_MODULE_PREVIEW_API__,{fn:y}=__STORYBOOK_MODULE_TEST__,b={title:`Components/Navigation/Tab Bar`,component:p,tags:[`autodocs`],args:{activeTab:1,onChange:y()},argTypes:{activeTab:{control:`inline-radio`,options:[1,2,3,4,5],description:`activeTab`},onChange:{action:`change`}},parameters:{layout:`fullscreen`,docs:{description:{component:`Нижний таббар на 5 вкладок: Главная, Расписание, Активность, Каталог, Профиль. 375×83 с зоной Home Bar.\r
+Кликните по вкладке — активная сменится плавно.\r
+
+Figma: Tab Bar \`407:2310\` · activeTab: 1 | 2 | 3 | 4 | 5.`}}},decorators:[e=>(0,_.jsx)(`div`,{style:{width:375},children:(0,_.jsx)(e,{})})],render:function(e){let[,t]=v();return(0,_.jsx)(p,{...e,onChange:n=>{e.onChange?.(n),t({activeTab:n})}})}},x={},S={args:{activeTab:2}},C={args:{activeTab:5}},w={render:e=>(0,_.jsx)(`div`,{style:{display:`flex`,flexDirection:`column`,gap:`var(--spacing-4)`,background:`var(--bg-baseGray)`},children:[1,2,3,4,5].map(t=>(0,_.jsx)(p,{...e,activeTab:t},t))})},T=[`Home`,`Schedule`,`Profile`,`AllVariants`],x.parameters={...x.parameters,docs:{...x.parameters?.docs,source:{originalSource:`{}`,...x.parameters?.docs?.source},description:{story:`Главная.`,...x.parameters?.docs?.description}}},S.parameters={...S.parameters,docs:{...S.parameters?.docs,source:{originalSource:`{
+  args: {
+    activeTab: 2
+  }
+}`,...S.parameters?.docs?.source},description:{story:`Расписание.`,...S.parameters?.docs?.description}}},C.parameters={...C.parameters,docs:{...C.parameters?.docs,source:{originalSource:`{
+  args: {
+    activeTab: 5
+  }
+}`,...C.parameters?.docs?.source},description:{story:`Профиль.`,...C.parameters?.docs?.description}}},w.parameters={...w.parameters,docs:{...w.parameters?.docs,source:{originalSource:`{
+  render: args => <div style={{
+    display: 'flex',
+    flexDirection: 'column',
+    gap: 'var(--spacing-4)',
+    background: 'var(--bg-baseGray)'
+  }}>\r
+      {([1, 2, 3, 4, 5] as TabBarTab[]).map(n => <TabBar key={n} {...args} activeTab={n} />)}\r
+    </div>
+}`,...w.parameters?.docs?.source},description:{story:`activeTab 1–5.`,...w.parameters?.docs?.description}}}})))()}E();export{w as AllVariants,x as Home,C as Profile,S as Schedule,T as __namedExportsOrder,b as default};

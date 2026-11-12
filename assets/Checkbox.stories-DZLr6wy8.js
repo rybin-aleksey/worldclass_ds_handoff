@@ -1,0 +1,17 @@
+import{n as e}from"./rolldown-runtime-sJBDdmOt.js";import{t}from"./jsx-runtime-MKhVqBIO.js";import{t as n}from"./cx-BOo3OvTL.js";var r,i,a,o;function s(){return(s=e((()=>{r=`_root_iy9ih_1`,i=`_input_iy9ih_8`,a=`_box_iy9ih_15`,o={root:r,input:i,box:a}})))()}function c({isActive:e=!1,label:t,className:r,...i}){return(0,l.jsxs)(`span`,{className:n(o.root,r),children:[(0,l.jsx)(`input`,{type:`checkbox`,className:o.input,checked:e,"aria-label":t,readOnly:!i.onChange,...i}),(0,l.jsx)(`span`,{className:o.box,"aria-hidden":`true`})]})}var l;function u(){return(u=e((()=>{s(),l=t(),c.__docgenInfo={description:`Checkbox — Figma 1665:2354. Флажок 20×20.`,methods:[],displayName:`Checkbox`,props:{isActive:{required:!1,tsType:{name:`boolean`},description:`isActive: Yes | No`,defaultValue:{value:`false`,computed:!1}},label:{required:!1,tsType:{name:`string`},description:`Доступное имя, если флажок без видимой подписи`}},composes:[`Omit`]}})))()}var d,f,p,m,h,g,_,v,y;function b(){return(b=e((()=>{u(),d=t(),{useArgs:f}=__STORYBOOK_MODULE_PREVIEW_API__,{fn:p}=__STORYBOOK_MODULE_TEST__,m={title:`Components/Selection/Checkbox`,component:c,tags:[`autodocs`],args:{isActive:!0,label:`Согласен с условиями оферты`,disabled:!1,onChange:p()},argTypes:{isActive:{control:`boolean`,description:`isActive: Yes | No`},label:{control:`text`,description:`Доступное имя`},disabled:{control:`boolean`},onChange:{action:`change`}},parameters:{layout:`centered`,docs:{description:{component:'Флажок 20×20. Настоящий `input type="checkbox"`: кликните — состояние переключится, галочка появится плавно.\r\nФон в Figma привязан к удалённой переменной `icons/dark grey` у обоих состояний; в коде — `icons/secondaryLine`.\r\n\nFigma: Checkbox `1665:2354` · isActive: Yes | No.'}}},render:function(e){let[,t]=f();return(0,d.jsx)(c,{...e,onChange:n=>{e.onChange?.(n),t({isActive:n.target.checked})}})}},h={},g={args:{isActive:!1}},_={args:{disabled:!0}},v={render:e=>(0,d.jsxs)(`div`,{style:{display:`flex`,gap:`var(--spacing-6)`},children:[(0,d.jsx)(c,{...e,isActive:!0}),(0,d.jsx)(c,{...e,isActive:!1})]})},y=[`Active`,`Inactive`,`Disabled`,`AllVariants`],h.parameters={...h.parameters,docs:{...h.parameters?.docs,source:{originalSource:`{}`,...h.parameters?.docs?.source},description:{story:`isActive=Yes.`,...h.parameters?.docs?.description}}},g.parameters={...g.parameters,docs:{...g.parameters?.docs,source:{originalSource:`{
+  args: {
+    isActive: false
+  }
+}`,...g.parameters?.docs?.source},description:{story:`isActive=No.`,...g.parameters?.docs?.description}}},_.parameters={..._.parameters,docs:{..._.parameters?.docs,source:{originalSource:`{
+  args: {
+    disabled: true
+  }
+}`,..._.parameters?.docs?.source},description:{story:`Недоступен.`,..._.parameters?.docs?.description}}},v.parameters={...v.parameters,docs:{...v.parameters?.docs,source:{originalSource:`{
+  render: args => <div style={{
+    display: 'flex',
+    gap: 'var(--spacing-6)'
+  }}>\r
+      <Checkbox {...args} isActive />\r
+      <Checkbox {...args} isActive={false} />\r
+    </div>
+}`,...v.parameters?.docs?.source},description:{story:`Yes и No рядом.`,...v.parameters?.docs?.description}}}})))()}b();export{h as Active,v as AllVariants,_ as Disabled,g as Inactive,y as __namedExportsOrder,m as default};

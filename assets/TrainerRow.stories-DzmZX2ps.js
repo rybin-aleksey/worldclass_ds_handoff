@@ -1,0 +1,22 @@
+import{n as e}from"./rolldown-runtime-sJBDdmOt.js";import{t}from"./jsx-runtime-MKhVqBIO.js";import{t as n}from"./cx-BOo3OvTL.js";import{n as r}from"./Icon-CKeJH59w.js";import{t as i}from"./Icon-DQAy2_MQ.js";import{n as a,t as o}from"./Row.module-DVcde3oz.js";import{n as s,t as c}from"./TrainerPhotoAvatar-DXFPc8WD.js";function l(){return(l=e((()=>{s()})))()}function u({name:e,category:t,showChevron:i=!0,trainer:a=1,photoSrc:s,className:l,...u}){return(0,d.jsxs)(`button`,{type:`button`,className:n(o.root,l),...u,children:[(0,d.jsx)(c,{trainer:a,src:s}),(0,d.jsxs)(`span`,{className:o.info,children:[(0,d.jsx)(`span`,{className:n(o.title,`ds-cart-text-20`),children:e}),(0,d.jsx)(`span`,{className:n(o.subtitle,`ds-caption-cart_text-14`),children:t})]}),i&&(0,d.jsx)(r,{name:`20px / chevron-right`,className:o.chevron})]})}var d;function f(){return(f=e((()=>{i(),l(),a(),d=t(),u.__docgenInfo={description:`Trainer Row — Figma 40000427:729. Строка тренера 343×56: аватар, имя, категория, шеврон.`,methods:[],displayName:`TrainerRow`,props:{name:{required:!0,tsType:{name:`string`},description:``},category:{required:!0,tsType:{name:`string`},description:``},showChevron:{required:!1,tsType:{name:`boolean`},description:`Show Chevron (по умолчанию true)`,defaultValue:{value:`true`,computed:!1}},trainer:{required:!1,tsType:{name:`union`,raw:`1 | 2 | 3`,elements:[{name:`literal`,value:`1`},{name:`literal`,value:`2`},{name:`literal`,value:`3`}]},description:`Вложенный Trainer Photo / Avatar → Trainer`,defaultValue:{value:`1`,computed:!1}},photoSrc:{required:!1,tsType:{name:`string`},description:``}},composes:[`ButtonHTMLAttributes`]}})))()}var p,m,h,g,_,v,y,b;function x(){return(x=e((()=>{f(),p=t(),{fn:m}=__STORYBOOK_MODULE_TEST__,h={title:`Components/Cards/Trainer Row`,component:u,tags:[`autodocs`],args:{name:`Анастасия Андреенкова`,category:`Элит-тренер`,showChevron:!0,trainer:1,onClick:m()},argTypes:{name:{control:`text`},category:{control:`text`},showChevron:{control:`boolean`,description:`Show Chevron`},trainer:{control:`inline-radio`,options:[1,2,3],description:`Trainer Photo / Avatar → Trainer`},photoSrc:{control:`text`},onClick:{action:`click`}},parameters:{layout:`padded`,docs:{description:{component:`Строка тренера 343×56: аватар, имя, категория, шеврон. Имя и категория обрезаются в одну строку.\r
+
+Figma: Trainer Row \`40000427:729\` · Show Chevron (по умолчанию true) · вложенный Trainer Photo / Avatar.`}}},decorators:[e=>(0,p.jsx)(`div`,{style:{maxWidth:343},children:(0,p.jsx)(e,{})})]},g={},_={args:{showChevron:!1}},v={args:{name:`Анастасия Александровна Андреенкова-Соколова`,category:`Элит-тренер, функциональный тренинг и растяжка`}},y={render:e=>(0,p.jsxs)(`div`,{style:{display:`flex`,flexDirection:`column`,gap:`var(--spacing-4)`},children:[(0,p.jsx)(u,{...e}),(0,p.jsx)(u,{...e,showChevron:!1,trainer:2}),(0,p.jsx)(u,{...e,trainer:3,name:`Анастасия Александровна Андреенкова-Соколова`})]})},b=[`Default`,`NoChevron`,`LongText`,`AllVariants`],g.parameters={...g.parameters,docs:{...g.parameters?.docs,source:{originalSource:`{}`,...g.parameters?.docs?.source},description:{story:`С шевроном.`,...g.parameters?.docs?.description}}},_.parameters={..._.parameters,docs:{..._.parameters?.docs,source:{originalSource:`{
+  args: {
+    showChevron: false
+  }
+}`,..._.parameters?.docs?.source},description:{story:`Без шеврона.`,..._.parameters?.docs?.description}}},v.parameters={...v.parameters,docs:{...v.parameters?.docs,source:{originalSource:`{
+  args: {
+    name: 'Анастасия Александровна Андреенкова-Соколова',
+    category: 'Элит-тренер, функциональный тренинг и растяжка'
+  }
+}`,...v.parameters?.docs?.source},description:{story:`Длинные тексты обрезаются.`,...v.parameters?.docs?.description}}},y.parameters={...y.parameters,docs:{...y.parameters?.docs,source:{originalSource:`{
+  render: args => <div style={{
+    display: 'flex',
+    flexDirection: 'column',
+    gap: 'var(--spacing-4)'
+  }}>\r
+      <TrainerRow {...args} />\r
+      <TrainerRow {...args} showChevron={false} trainer={2} />\r
+      <TrainerRow {...args} trainer={3} name="Анастасия Александровна Андреенкова-Соколова" />\r
+    </div>
+}`,...y.parameters?.docs?.source},description:{story:`Show Chevron true/false и обрезка.`,...y.parameters?.docs?.description}}}})))()}x();export{y as AllVariants,g as Default,v as LongText,_ as NoChevron,b as __namedExportsOrder,h as default};

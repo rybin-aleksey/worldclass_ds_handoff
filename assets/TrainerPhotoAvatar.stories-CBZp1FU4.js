@@ -1,0 +1,8 @@
+import{n as e}from"./rolldown-runtime-sJBDdmOt.js";import{t}from"./jsx-runtime-MKhVqBIO.js";import{n,t as r}from"./TrainerPhotoAvatar-DXFPc8WD.js";var i,a,o,s,c;function l(){return(l=e((()=>{n(),i=t(),a={title:`Components/Cards/Media/Trainer Photo Avatar`,component:r,tags:[`autodocs`],args:{trainer:1,alt:``},argTypes:{trainer:{control:`inline-radio`,options:[1,2,3],description:`trainer`},src:{control:`text`,description:`URL фото`},alt:{control:`text`}},parameters:{layout:`centered`,docs:{description:{component:"Аватар тренера 56×56, border radius/3, фон bg/pictureBg. Используется в Trainer Row.\r\nБез `src` показывается плейсхолдер формата (фон без фото). Меняется только содержимое, размер и скругление фиксированы.\r\n\nFigma: Trainer Photo Avatar `40000421:733` · trainer: 1 | 2 | 3."}}}},o={},s={render:e=>(0,i.jsx)(`div`,{style:{display:`flex`,gap:`var(--spacing-4)`},children:[1,2,3].map(t=>(0,i.jsx)(r,{...e,trainer:t},t))})},c=[`Default`,`AllVariants`],o.parameters={...o.parameters,docs:{...o.parameters?.docs,source:{originalSource:`{}`,...o.parameters?.docs?.source},description:{story:`Плейсхолдер формата.`,...o.parameters?.docs?.description}}},s.parameters={...s.parameters,docs:{...s.parameters?.docs,source:{originalSource:`{
+  render: args => <div style={{
+    display: 'flex',
+    gap: 'var(--spacing-4)'
+  }}>\r
+      {([1, 2, 3] as const).map(v => <TrainerPhotoAvatar key={v} {...args} trainer={v} />)}\r
+    </div>
+}`,...s.parameters?.docs?.source},description:{story:`Все значения trainer.`,...s.parameters?.docs?.description}}}})))()}l();export{s as AllVariants,o as Default,c as __namedExportsOrder,a as default};

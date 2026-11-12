@@ -1,0 +1,8 @@
+import{n as e}from"./rolldown-runtime-sJBDdmOt.js";import{t}from"./jsx-runtime-MKhVqBIO.js";import{n,t as r}from"./TrainingImageCompact-Cznl33Re.js";var i,a,o,s,c;function l(){return(l=e((()=>{n(),i=t(),a={title:`Components/Cards/Media/Training Image Compact`,component:r,tags:[`autodocs`],args:{image:1,alt:``},argTypes:{image:{control:`inline-radio`,options:[1],description:`image`},src:{control:`text`,description:`URL фото`},alt:{control:`text`}},parameters:{layout:`centered`,docs:{description:{component:"Фото тренировки 164×132, border radius/4, фон bg/baseGray. Используется в Training Card / Compact.\r\nБез `src` показывается плейсхолдер формата (фон без фото). Меняется только содержимое, размер и скругление фиксированы.\r\n\nFigma: Training Image Compact `40000429:3342` · image: 1."}}}},o={},s={render:e=>(0,i.jsx)(`div`,{style:{display:`flex`,gap:`var(--spacing-4)`},children:[1].map(t=>(0,i.jsx)(r,{...e,image:t},t))})},c=[`Default`,`AllVariants`],o.parameters={...o.parameters,docs:{...o.parameters?.docs,source:{originalSource:`{}`,...o.parameters?.docs?.source},description:{story:`Плейсхолдер формата.`,...o.parameters?.docs?.description}}},s.parameters={...s.parameters,docs:{...s.parameters?.docs,source:{originalSource:`{
+  render: args => <div style={{
+    display: 'flex',
+    gap: 'var(--spacing-4)'
+  }}>\r
+      {([1] as const).map(v => <TrainingImageCompact key={v} {...args} image={v} />)}\r
+    </div>
+}`,...s.parameters?.docs?.source},description:{story:`Все значения image.`,...s.parameters?.docs?.description}}}})))()}l();export{s as AllVariants,o as Default,c as __namedExportsOrder,a as default};

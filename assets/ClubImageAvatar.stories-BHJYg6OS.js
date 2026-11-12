@@ -1,0 +1,8 @@
+import{n as e}from"./rolldown-runtime-sJBDdmOt.js";import{t}from"./jsx-runtime-MKhVqBIO.js";import{n,t as r}from"./ClubImageAvatar-BLQ-eZXP.js";var i,a,o,s,c;function l(){return(l=e((()=>{n(),i=t(),a={title:`Components/Cards/Media/Club Image Avatar`,component:r,tags:[`autodocs`],args:{club:1,alt:``},argTypes:{club:{control:`inline-radio`,options:[1],description:`club`},src:{control:`text`,description:`URL фото`},alt:{control:`text`}},parameters:{layout:`centered`,docs:{description:{component:"Аватар клуба 56×56, border radius/3, фон bg/baseGray. Используется в Club Row.\r\nБез `src` показывается плейсхолдер формата (фон без фото). Меняется только содержимое, размер и скругление фиксированы.\r\n\nFigma: Club Image Avatar `40000432:683` · club: 1."}}}},o={},s={render:e=>(0,i.jsx)(`div`,{style:{display:`flex`,gap:`var(--spacing-4)`},children:[1].map(t=>(0,i.jsx)(r,{...e,club:t},t))})},c=[`Default`,`AllVariants`],o.parameters={...o.parameters,docs:{...o.parameters?.docs,source:{originalSource:`{}`,...o.parameters?.docs?.source},description:{story:`Плейсхолдер формата.`,...o.parameters?.docs?.description}}},s.parameters={...s.parameters,docs:{...s.parameters?.docs,source:{originalSource:`{
+  render: args => <div style={{
+    display: 'flex',
+    gap: 'var(--spacing-4)'
+  }}>\r
+      {([1] as const).map(v => <ClubImageAvatar key={v} {...args} club={v} />)}\r
+    </div>
+}`,...s.parameters?.docs?.source},description:{story:`Все значения club.`,...s.parameters?.docs?.description}}}})))()}l();export{s as AllVariants,o as Default,c as __namedExportsOrder,a as default};
